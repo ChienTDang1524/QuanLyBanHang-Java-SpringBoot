@@ -1,41 +1,135 @@
+cat > README.md << 'EOF'
+# 🛍️ Product Management System
 
+A product management system built with Spring Boot, designed for managing products, categories, brands, and inventory status.
 
-##  Gi?i thi?u
-H? th?ng **Qu?n Ly Bán Hàng** du?c phát tri?n b?ng **Spring Boot**, cung c?p API RESTful cho vi?c qu?n ly s?n ph?m, thuong hi?u, danh m?c và tr?ng thái s?n ph?m.
+## 📋 Project Description
 
-##  Tính nang chính
--  **Qu?n ly s?n ph?m**: Thêm, s?a, xóa, tìm ki?m s?n ph?m
--  **Qu?n ly danh m?c**: Thuong hi?u, danh m?c chính, danh m?c con
--  **Tìm ki?m nâng cao**: Theo tên, giá, thuong hi?u, tr?ng thái
--  **REST API**: D?y d? CRUD operations
+This system provides a RESTful API for managing product information including categories, subcategories, brands, and product status. It uses Spring Boot framework with JPA for database operations and follows MVC architecture pattern.
 
-##  Công ngh? s? d?ng
-- **Backend**: Java 17, Spring Boot 3.0, Spring Data JPA
-- **Database**: SQL Server
-- **Tools**: Maven, Git
-- **Frontend**: HTML5, Bootstrap 5, JavaScript
+## 🔧 Technologies Used
 
-##  Cài d?t nhanh
-```bash
-git clone https://github.com/ChienTDang1524/QuanLyBanHang-Java-SpringBoot.git
-cd QuanLyBanHang-Java-SpringBoot
-mvn spring-boot:run
+- **Spring Boot** - Main framework
+- **Spring Data JPA** - Database operations
+- **Gradle** - Build tool and dependency management
+- **Java** - Programming language
+- **SQL Database** - Data storage
+- **RESTful API** - Communication protocol
+
+## 📁 Project Structure
+```
+test01/
+├── src/
+│   ├── main/
+│   │   ├── java/org/example/test01/
+│   │   │   ├── controller/          # API Controllers
+│   │   │   │   └── ProductController.java
+│   │   │   ├── entity/              # Database Entities
+│   │   │   │   ├── Product.java
+│   │   │   │   ├── Category.java
+│   │   │   │   ├── SubCategory.java
+│   │   │   │   ├── Brand.java
+│   │   │   │   └── Status.java
+│   │   │   ├── repository/          # Data Access Layer
+│   │   │   │   ├── ProductRepository.java
+│   │   │   │   ├── CategoryRepository.java
+│   │   │   │   ├── SubCategoryRepository.java
+│   │   │   │   ├── BrandRepository.java
+│   │   │   │   └── StatusRepository.java
+│   │   │   ├── service/             # Business Logic
+│   │   │   │   ├── ProductService.java
+│   │   │   │   └── impl/
+│   │   │   │       └── ProductServiceImpl.java
+│   │   │   ├── model/               # DTOs
+│   │   │   │   ├── request/
+│   │   │   │   │   └── ProductRequestDTO.java
+│   │   │   │   ├── response/
+│   │   │   │   │   ├── ProductResponseDTO.java
+│   │   │   │   │   ├── CategoryResponseDTO.java
+│   │   │   │   │   ├── SubCategoryResponseDTO.java
+│   │   │   │   │   └── StatusReponseDTO.java
+│   │   │   │   └── exception/
+│   │   │   │       └── ResourceNotFoundException.java
+│   │   │   └── Test01Application.java
+│   │   └── resources/
+│   │       ├── application.properties
+│   │       ├── static/
+│   │       │   └── index.html
+│   │       └── templates/
+│   └── test/
+│       └── java/org/example/test01/
+│           └── Test01ApplicationTests.java
+├── build.gradle
+├── settings.gradle
+├── gradlew
+├── gradlew.bat
+└── HELP.md
 ```
 
-##  API Examples
+## 🚀 Features
+
+- Product CRUD operations
+- Category and subcategory management
+- Brand management
+- Product status tracking
+- RESTful API endpoints
+- Exception handling
+- DTO pattern for request/response
+
+## ⚙️ Setup and Installation
+
+### Prerequisites
+- Java 17 or higher
+- Gradle 7.x or higher
+- Database (MySQL/PostgreSQL/H2)
+
+### Installation Steps
+
+1. Clone the repository
 ```bash
-# L?y t?t c? s?n ph?m
-GET http://localhost:8080/products/all
-
-# Tìm ki?m s?n ph?m
-GET http://localhost:8080/products/search?name=áo&price=100000
-
-# Thêm s?n ph?m m?i
-POST http://localhost:8080/products
+git clone <repository-url>
+cd XuongDan/test01
 ```
 
-##  Tác gi?
-**ChienTDang1524** - [GitHub](https://github.com/ChienTDang1524)
+2. Configure database connection in `application.properties`
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/your_database
+spring.datasource.username=your_username
+spring.datasource.password=your_password
+```
 
----
- **N?u th?y h?u ích, hay cho repo m?t star--- >> README.md*
+3. Build the project
+```bash
+./gradlew build
+```
+
+4. Run the application
+```bash
+./gradlew bootRun
+```
+
+The application will start on `http://localhost:8080`
+
+## 📡 API Endpoints
+
+### Product Management
+- `GET /api/products` - Get all products
+- `GET /api/products/{id}` - Get product by ID
+- `POST /api/products` - Create new product
+- `PUT /api/products/{id}` - Update product
+- `DELETE /api/products/{id}` - Delete product
+
+## 🏗️ Architecture
+
+The project follows a layered architecture:
+
+1. **Controller Layer** - Handles HTTP requests and responses
+2. **Service Layer** - Contains business logic
+3. **Repository Layer** - Data access and persistence
+4. **Entity Layer** - Database models
+5. **DTO Layer** - Data transfer objects for API communication
+
+## 📝 License
+
+This project is licensed under the MIT License.
+EOF
