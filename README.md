@@ -110,7 +110,7 @@ spring.datasource.password=your_password
 
 The application will start on `http://localhost:8080`
 
-## 📡 API Endpoints
+##  API Endpoints
 
 ### Product Management
 - `GET /api/products` - Get all products
@@ -129,7 +129,7 @@ The project follows a layered architecture:
 4. **Entity Layer** - Database models
 5. **DTO Layer** - Data transfer objects for API communication
 
-## 📝 License
+##  License
 
 This project is licensed under the MIT License.
 EOF
