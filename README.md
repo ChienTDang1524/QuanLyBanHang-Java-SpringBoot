@@ -7,7 +7,7 @@ A product management system built with Spring Boot, designed for managing produc
 
 This system provides a RESTful API for managing product information including categories, subcategories, brands, and product status. It uses Spring Boot framework with JPA for database operations and follows MVC architecture pattern.
 
-## 🔧 Technologies Used
+## Technologies Used
 
 - **Spring Boot** - Main framework
 - **Spring Data JPA** - Database operations
