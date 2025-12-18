@@ -1,9 +1,9 @@
 cat > README.md << 'EOF'
-# 🛍️ Product Management System
+#  Product Management System
 
 A product management system built with Spring Boot, designed for managing products, categories, brands, and inventory status.
 
-## 📋 Project Description
+##  Project Description
 
 This system provides a RESTful API for managing product information including categories, subcategories, brands, and product status. It uses Spring Boot framework with JPA for database operations and follows MVC architecture pattern.
 
@@ -16,7 +16,7 @@ This system provides a RESTful API for managing product information including ca
 - **SQL Database** - Data storage
 - **RESTful API** - Communication protocol
 
-## 📁 Project Structure
+##  Project Structure
 ```
 test01/
 ├── src/
@@ -66,7 +66,7 @@ test01/
 └── HELP.md
 ```
 
-## 🚀 Features
+##  Features
 
 - Product CRUD operations
 - Category and subcategory management
@@ -76,7 +76,7 @@ test01/
 - Exception handling
 - DTO pattern for request/response
 
-## ⚙️ Setup and Installation
+##  Setup and Installation
 
 ### Prerequisites
 - Java 17 or higher
@@ -119,7 +119,7 @@ The application will start on `http://localhost:8080`
 - `PUT /api/products/{id}` - Update product
 - `DELETE /api/products/{id}` - Delete product
 
-## 🏗️ Architecture
+## Architecture
 
 The project follows a layered architecture:
 
